@@ -233,7 +233,11 @@ h3 {
 
 /* Here footer I learned Site footer https://codepen.io/slstudios/pen/XbzQVK */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
-
+.Bigsection {
+  width: 100%;
+  display: inline-block;
+  height: 170vh;
+}
 
 .footer-distributed {
   background: #F1E3D3;
@@ -242,7 +246,7 @@ h3 {
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
-  padding: 55px 50px;
+  padding: 10px 25px;
   /* IMPORATNT: TO make sure footer in bottom */
   position:fixed;
   bottom:0;
@@ -257,7 +261,7 @@ h3 {
 
 /* Footer left and right align*/
 .footer-distributed .footer-left {
-  width: 40%;
+  width: 30%;
 }
 
 /* design My logo: Xia Chen */
@@ -447,6 +451,8 @@ ul{
   display: flex;
   gap: 18px;
 
+  height: 130vh;/*to avoid footer cover text page*/
+
 }
 
 .grow1 { flex-grow: 1; }
@@ -468,3 +474,6 @@ ul{
   color:coral;
   font-family:'Times New Roman', Times, serif;
 }
+
+
+
