@@ -1,0 +1,470 @@
+/* design a responsive navbar
+reset all brower styling and choose alt box model option
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins", "Courier New", Courier, monospace;
+}
+
+/*navbar link text style:none*/
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/*Style layout of navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #efa36c;
+  color: #311e10;
+}
+
+.nav-link a {
+  color: black;
+}
+
+/*Style navbar menu*/
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+/**exampe of pesudo clas usage in css*/
+.menu li:hover {
+  background-color: #fff8eb;
+  border-radius: 5px;
+
+  /*example of css transition*/
+  transition: 1s ease;
+}
+
+.menu li {
+  padding: 5px 13px;
+}
+
+/*dropdown menu*/
+.Contact {
+  position: relative;
+}
+
+.dropdown {
+  background-color: #efa36c;
+  padding: 1em 0;
+  position: absolute; /*relative to the parent*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 5.5em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #fff8eb;
+}
+
+.Contact:hover .dropdown {
+  display: block;
+}
+
+/*responsive styling of the navbar*/
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/*responsive design using css media queries*/
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #fff8eb;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #efa36c;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30%;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #fff8eb;
+    transition: 1s ease;
+  }
+}
+
+/*-------create a degree progress bar animation----------*/
+/* Styling the h2 tag by giving color, 
+letter spacing, font-size etc.*/
+
+.progress-bar-container{
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 5vh; /* This ensures the container takes up the full viewport height */
+}
+  .progress-bar-container h2 {
+  text-align: center;
+  font-family: 'Akaya Telivigala', cursive;
+  letter-spacing: 1px;
+}
+
+/* Styling the border and box
+effect of the progress bar*/
+.progress-bar {
+
+  width: 400px;
+  height: 10px;
+  border: 1px solid #565656;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(245, 159, 0);
+}
+
+/* Stylingthe background color of each 
+animation and border radius */
+.percentage {
+  
+  display: block;
+  height: 100%;
+  background-color: #efa36c;
+  border-radius: 5px;
+  animation: progress 1s ease-in 1;
+}
+
+/* Assigning width of each languages*/
+.bs {
+  
+  width: 98%;
+}
+
+/* Animating the progress bar by 
+initially starting from 0*/
+@keyframes progress {
+  from {
+    width: 0;
+  }
+}
+/*------------------------------------------------------------*/
+h1,
+h2,
+h3 {
+  font-family: 'New Tegomin', serif;
+  color: #50514f;
+}
+
+.Page-heading {
+  text-align: center;
+  font-size: 33px;
+  font-family: 'Rye', cursive;
+  padding: 16px;
+  margin-bottom: 5px;
+}
+.Page-subheading {
+  text-align: left;
+  font-family: 'New Tegomin', serif;
+  /* border: 5px dotted #73ad21; */
+  font-size: 15px;
+  padding: 106px;
+  text-align: center;
+  /* margin-bottom: 50px; */
+}
+.sub-subheading{
+  font-size: 28px;
+  font-family: 'New Tegomin', serif;
+  
+}
+
+#logContainer {
+  text-align: center;
+}
+.aside1 {
+  text-transform: uppercase;
+  font-family:'New Tegomin', serif;
+
+}
+
+/* Here footer I learned Site footer https://codepen.io/slstudios/pen/XbzQVK */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+
+.footer-distributed {
+  background: #F1E3D3;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  /* IMPORATNT: TO make sure footer in bottom */
+  position:fixed;
+  bottom:0;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;/*address, phone, and email on the right*/
+  vertical-align: top;
+}
+
+/* Footer left and right align*/
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* design My logo: Xia Chen */
+.footer-distributed h3 {
+  color: #6F1A07;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+.footer-distributed h3 span {
+  color: #E0A4AE;
+}
+
+/* Footer links: home, github..color.. */
+.footer-distributed .footer-links {
+  color: #6F1A07;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+/*Xia Chen © 2023*/
+.footer-distributed .footer-my-name {
+  color: #232E21;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+.footer-distributed .footer-center i {
+  background-color: #F1E3D3;
+  color: #33383b;
+  font-size: 28px;
+  width: 38px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #33383b;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #BA5624;/*email font color*/
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #33383b;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+/* Footer Right */
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+/*About me -footer*/
+.footer-distributed .footer-my-about {
+  line-height: 20px;
+  color: #0F0E0E;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-my-about span {
+  display: block;
+  color: #0F0E0E;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* If we don't want the footer to be responsive,
+ remove these media queries */
+@media (max-width: 768px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/* -------------my_resume---------------------- */
+.resume-body{
+  text-align: left;
+  color: #33383b;
+  padding: 50px;
+  font-family:'Times New Roman', Times, serif;
+}
+#Objective{
+  font-size: 25px;
+}
+#Objective p{
+  font-size: 15px;
+}
+#ProfessionalExperience{
+  font-size: 25px;
+}
+#ProfessionalExperience p{
+  font-size: 19px;
+}
+ul{
+  font-size: 15px;
+}
+#EducationalExperiences{
+  font-size: 25px;
+}
+
+#Hobbies{
+  font-size: 25px;
+}
+#Hobbies p{
+  font-size: 15px;
+}
+
+/* Style the entire table */
+.table1 {
+  font-size: 15px;
+  width: 50%;
+  border-collapse: collapse; /* This removes the spacing between table cells */
+  border: 2px solid burlywood; /* Set the border style, width, and color for the entire table */
+}
+
+/* Style the table headers */
+.table1 th {
+  border: 2px solid burlywood; /* Set the border style, width, and color for table headers */
+  padding: 8px; /* Add padding to improve visual spacing */
+  text-align: left; /* Align text to the left within table headers */
+}
+
+/* Style the table data cells */
+.table1 td {
+  border: 2px solid burlywood; /* Set the border style, width, and color for table data cells */
+  padding: 8px; /* Add padding to improve visual spacing */
+  text-align: left; /* Align text to the left within table data cells */
+}
+
+
+
+/*-----------------funfact--------------*/
+/*https://layout.bradwoods.io/customize*/
+.layout {
+  width: 100%;
+  padding: 10;
+  display: flex;
+  gap: 18px;
+
+}
+
+.grow1 { flex-grow: 1; }
+
+.myFav h5{
+  font-size: 20px;
+  color:#6F1A07;
+  font-family:cursive;
+}
+
+.myFav p{
+  font-size: 16px;
+  color:#311e10;
+  font-family:cursive;
+}
+
+.myFav a{
+  font-size: 16px;
+  color:coral;
+  font-family:'Times New Roman', Times, serif;
+}
