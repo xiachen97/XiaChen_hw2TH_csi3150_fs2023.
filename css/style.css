@@ -212,7 +212,7 @@ h3 {
   font-family: 'New Tegomin', serif;
   /* border: 5px dotted #73ad21; */
   font-size: 15px;
-  padding: 106px;
+  padding: 60px;/*control introduce text and degree bar padding*/
   text-align: center;
   /* margin-bottom: 50px; */
 }
@@ -236,7 +236,7 @@ h3 {
 .Bigsection {
   width: 100%;
   display: inline-block;
-  height: 170vh;
+  height: 100vh;
 }
 
 .footer-distributed {
@@ -282,7 +282,7 @@ h3 {
 }
 .footer-distributed .footer-links a {
   display: inline-block;
-  line-height: 1.8;
+  /* line-height: 1.8px; */
   font-weight: 400;
   text-decoration: none;
   color: inherit;
@@ -451,7 +451,7 @@ ul{
   display: flex;
   gap: 18px;
 
-  height: 130vh;/*to avoid footer cover text page*/
+  height: 100vh;/*to avoid footer cover text page*/
 
 }
 
